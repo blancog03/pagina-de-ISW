@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Transportes XYZ</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="imagenes/logo.jfif" alt="Logo Transportes XYZ">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="paginas/Reservas.html">Reservas</a></li>
+                <li><a href="paginas/seguimiento.html">Seguimiento</a></li>
+                <li><a href="paginas/perfil.html">Perfil</a></li>
+                <li><a href="paginas/contacto.html">Contacto</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="paginas/Reservas.html" class="btn">Login/Registro</a>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transportes XYZ</h1>
+            <p>Soluciones logísticas rápidas y seguras para tu carga</p>
+            <a href="paginas/Reservas.html" class="btn">¡Reserva Ahora!</a>
+        </div>
+    </section>
+
+    <!-- Galería de Servicios -->
+    <section class="galeria">
+        <h2>Nuestros Servicios</h2>
+        <div class="galeria-container">
+            <div class="servicio">
+                <img src="imagenes/Terrestre.jpeg" alt="Transporte Terrestre">
+                <h3>Transporte Terrestre</h3>
+                <p>Distribución nacional con flota moderna</p>
+            </div>
+            <div class="servicio">
+                <img src="imagenes/Aereo.png" alt="Transporte Aéreo">
+                <h3>Transporte Aéreo</h3>
+                <p>Envíos nacionales urgentes</p>
+            </div>
+            <div class="servicio">
+                <img src="imagenes/maritimo.jpg" alt="Almacenamiento">
+                <h3>Transporte Maritimo</h3>
+                <p>Envios de grandes proporciones a puertos pricipales de pais</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes de Suscripción -->
+    <section class="planes">
+        <h2>Planes de Suscripción</h2>
+        <div class="planes-container">
+            <div class="plan">
+                <h3>Básico</h3>
+                <p><span class="precio">$50/mes</span></p>
+                <ul>
+                    <li>5 envíos mensuales</li>
+                    <li>Seguimiento básico</li>
+                    <li>Soporte 24/7</li>
+                </ul>
+            </div>
+            <div class="plan destacado">
+                <h3>Premium</h3>
+                <p><span class="precio">$100/mes</span></p>
+                <ul>
+                    <li>15 envíos mensuales</li>
+                    <li>Seguimiento premium</li>
+                    <li>Prioridad en carga</li>
+                </ul>
+            </div>
+            <div class="plan">
+                <h3>Empresarial</h3>
+                <p><span class="precio">$200/mes</span></p>
+                <ul>
+                    <li>Envíos ilimitados</li>
+                    <li>Logística personalizada</li>
+                    <li>Descuentos especiales</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comentarios (Estilo Play Store) -->
+    <section class="comentarios">
+        <h2>Opiniones de Clientes</h2>
+        <div class="comentarios-container">
+            <!-- Comentario 1 -->
+            <div class="comentario">
+                <div class="comentario-header">
+                    <img src="imagenes/user1.jpg" alt="Usuario" class="avatar">
+                    <div>
+                        <h3>Carlos Martínez</h3>
+                        <div class="rating">
+                            ⭐⭐⭐⭐⭐ <span>Hace 1 semana</span>
+                        </div>
+                    </div>
+                </div>
+                <p>"El servicio terrestre fue puntual y mi carga llegó en perfecto estado. ¡Lo recomiendo!"</p>
+            </div>
+            
+            <!-- Comentario 2 -->
+            <div class="comentario">
+                <div class="comentario-header">
+                    <img src="imagenes/user2.jpg" alt="Usuario" class="avatar">
+                    <div>
+                        <h3>Ana López</h3>
+                        <div class="rating">
+                            ⭐⭐⭐⭐ <span>Hace 3 días</span>
+                        </div>
+                    </div>
+                </div>
+                <p>"Buen servicio aéreo, aunque el rastreo podría mejorar. Cumplieron con lo prometido."</p>
+            </div>
+        </div>
+        <a href="paginas/calificacion.html" class="btn">Dejar tu opinión</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 Transportes XYZ. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Menú hamburguesa
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const authButtons = document.querySelector('.auth-buttons');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            authButtons.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
