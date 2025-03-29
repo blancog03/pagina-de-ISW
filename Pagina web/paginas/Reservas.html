@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas | Transportes XYZ</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../imagenes/logo.jfif" alt="Logo Transportes XYZ">
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="seguimiento.html">Seguimiento</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="autenticacion.html" class="btn">Login</a>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Formulario de Reserva Mejorado -->
+    <section class="formulario-reserva">
+        <h2><i class="fas fa-truck"></i> Reserva de Transporte</h2>
+        <form id="reservaForm">
+            <!-- Origen -->
+            <div class="campo">
+                <label for="origen"><i class="fas fa-map-marker-alt"></i> Origen:</label>
+                <select id="origen" required>
+                    <option value="">-- Seleccione provincia --</option>
+                    <option value="Pinar del Río">Pinar del Río</option>
+                    <option value="La Habana">La Habana</option>
+                    <option value="Matanzas">Matanzas</option>
+                    <option value="Villa Clara">Villa Clara</option>
+                    <option value="Cienfuegos">Cienfuegos</option>
+                    <option value="Sancti Spíritus">Sancti Spíritus</option>
+                    <option value="Ciego de Ávila">Ciego de Ávila</option>
+                    <option value="Camagüey">Camagüey</option>
+                    <option value="Las Tunas">Las Tunas</option>
+                    <option value="Holguín">Holguín</option>
+                    <option value="Granma">Granma</option>
+                    <option value="Santiago de Cuba">Santiago de Cuba</option>
+                    <option value="Guantánamo">Guantánamo</option>
+                    <option value="Isla de la Juventud">Isla de la Juventud</option>
+                </select>
+                <span id="error-origen" class="error"></span>
+            </div>
+
+            <!-- Destino -->
+            <div class="campo">
+                <label for="destino"><i class="fas fa-flag-checkered"></i> Destino:</label>
+                <select id="destino" required>
+                    <option value="">-- Seleccione provincia --</option>
+                    <option value="Pinar del Río">Pinar del Río</option>
+                    <option value="La Habana">La Habana</option>
+                    <option value="Matanzas">Matanzas</option>
+                    <option value="Villa Clara">Villa Clara</option>
+                    <option value="Cienfuegos">Cienfuegos</option>
+                    <option value="Sancti Spíritus">Sancti Spíritus</option>
+                    <option value="Ciego de Ávila">Ciego de Ávila</option>
+                    <option value="Camagüey">Camagüey</option>
+                    <option value="Las Tunas">Las Tunas</option>
+                    <option value="Holguín">Holguín</option>
+                    <option value="Granma">Granma</option>
+                    <option value="Santiago de Cuba">Santiago de Cuba</option>
+                    <option value="Guantánamo">Guantánamo</option>
+                    <option value="Isla de la Juventud">Isla de la Juventud</option>
+                </select>
+                <span id="error-destino" class="error"></span>
+            </div>
+
+            <!-- Tipo de Carga -->
+            <div class="campo">
+                <label for="tipoCarga"><i class="fas fa-box"></i> Tipo de Carga:</label>
+                <select id="tipoCarga" required>
+                    <option value="">-- Seleccione tipo --</option>
+                    <option value="paquete">Paquete (hasta 5kg)</option>
+                    <option value="caja">Caja (hasta 20kg)</option>
+                    <option value="palet">Palet (hasta 500kg)</option>
+                    <option value="contenedor">Contenedor (+500kg)</option>
+                </select>
+                <span id="error-tipoCarga" class="error"></span>
+            </div>
+
+            <!-- Peso -->
+            <div class="campo">
+                <label for="peso"><i class="fas fa-weight-hanging"></i> Peso (kg):</label>
+                <input type="number" id="peso" min="1" placeholder="Ej: 50" required>
+                <span id="error-peso" class="error"></span>
+            </div>
+
+            <!-- Fecha -->
+            <div class="campo">
+                <label for="fecha"><i class="far fa-calendar-alt"></i> Fecha:</label>
+                <input type="date" id="fecha" required>
+                <span id="error-fecha" class="error"></span>
+            </div>
+
+            <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Reservar</button>
+        </form>
+    </section>
+
+    <script src="../script.js"></script>
+    <script>
+        // Menú hamburguesa
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const authButtons = document.querySelector('.auth-buttons');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            authButtons.classList.toggle('active');
+        });
+
+        // Deshabilitar fechas pasadas
+        document.getElementById('fecha').min = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+</html>
